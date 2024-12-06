@@ -12,8 +12,8 @@ class TestKata(unittest.TestCase):
 		expected = "Your number is either too big or too small!"
 		result = self.kata.convertToRoman(2000000000)
 		self.assertEqual(result, expected)
-	def test_convertToRoman_TypeError(self):
-		with self.assertRaises(TypeError):
+	def test_convertToRoman_ValueError(self):
+		with self.assertRaises(ValueError):
 			self.kata.convertToRoman("This is not a number")
 	
 if __name__ == "__main__":
